@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:academind_app/widgets/styledtext.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,7 +10,9 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.deepPurpleAccent,
         ),
-        body: const GradientContainer(Colors.deepPurple, Colors.purpleAccent),
+        body: const GradientContainer(
+          Colors.deepPurple, Colors.purpleAccent
+          )
   
         );
   }
@@ -27,7 +30,8 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [color1, color2], begin: Alignment.topLeft, end: Alignment.bottomRight)
-      ), 
+      ),
+      child: const Center (child: StyledText('Hello World'),), 
     );
   }
 }
